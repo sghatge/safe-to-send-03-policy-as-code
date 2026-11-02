@@ -1,0 +1,13 @@
+[
+  {"id": 1, "tool": "schema_browse"},
+  {"id": 2, "tool": "query_run", "is_write": false, "returns_pii": true},
+  {"id": 3, "tool": "query_run", "is_write": false, "returns_pii": false},
+  {"id": 4, "tool": "query_run", "is_write": true},
+  {"id": 5, "tool": "delivery_send", "qa_passed": true, "volume": 84000},
+  {"id": 6, "tool": "delivery_send", "qa_passed": true, "volume": 240000},
+  {"id": 7, "tool": "delivery_send", "qa_passed": false, "volume": 61000},
+  {"id": 8, "tool": "workflow_control", "compliance": true, "action": "pause"},
+  {"id": 9, "tool": "workflow_control", "compliance": false, "action": "start"},
+  {"id": 10, "tool": "js_execute"},
+  {"id": 11, "tool": "data_export"}
+]

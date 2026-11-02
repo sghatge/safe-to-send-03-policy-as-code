@@ -1,0 +1,18 @@
+{
+  "name": "autopilot",
+  "tools": {
+    "schema_browse": [{"id": "metadata-is-safe", "decision": "allow"}],
+    "query_run": [
+      {"id": "no-sql-writes", "when": {"is_write": true}, "decision": "block"},
+      {"id": "aggregates-ok", "decision": "allow"}
+    ],
+    "delivery_send": [
+      {"id": "qa-must-pass", "when": {"qa_passed": false}, "decision": "block"},
+      {"id": "agent-may-send", "decision": "allow"}
+    ],
+    "workflow_control": [
+      {"id": "agent-may-run-workflows", "decision": "allow"}
+    ],
+    "js_execute": [{"id": "agent-may-run-scripts", "decision": "allow"}]
+  }
+}

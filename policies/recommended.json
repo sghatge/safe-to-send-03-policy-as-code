@@ -1,0 +1,21 @@
+{
+  "name": "recommended",
+  "tools": {
+    "schema_browse": [{"id": "metadata-is-safe", "decision": "allow"}],
+    "query_run": [
+      {"id": "no-sql-writes", "when": {"is_write": true}, "decision": "block"},
+      {"id": "mask-row-level-pii", "when": {"returns_pii": true}, "decision": "allow_masked"},
+      {"id": "aggregates-ok", "decision": "allow"}
+    ],
+    "delivery_send": [
+      {"id": "qa-must-pass", "when": {"qa_passed": false}, "decision": "block"},
+      {"id": "big-sends-dual-approval", "when": {"volume_over": 100000}, "decision": "needs_approval_x2"},
+      {"id": "sends-need-a-human", "decision": "needs_approval"}
+    ],
+    "workflow_control": [
+      {"id": "protect-compliance-workflows", "when": {"compliance": true}, "decision": "block"},
+      {"id": "workflow-changes-need-a-human", "decision": "needs_approval"}
+    ],
+    "js_execute": [{"id": "scripts-dry-run-only", "decision": "dry_run"}]
+  }
+}
