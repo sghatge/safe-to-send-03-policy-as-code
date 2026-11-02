@@ -12,7 +12,7 @@ Before you merge a policy change, it replays the same agent session under the ol
 
 I diffed "recommended" against an "autopilot" policy. 6 of 11 calls changed. One was the agent pausing a compliance workflow.
 
-That's the line a reviewer needs to see before approving the pull request. Without the diff, it's buried in a YAML change nobody reads closely.
+That's the line a reviewer needs to see before approving the pull request. Without the diff, it's buried in a config change nobody reads closely.
 
 Policy changes are code changes. Review them like code changes.
 
