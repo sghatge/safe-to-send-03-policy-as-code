@@ -1,3 +1,15 @@
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/sghatge/sghatge/main/assets/portfolio/project-banner.svg" width="100%" alt="Sangram Ghatge engineering portfolio banner">
+
+**SAFE TO SEND · GOVERNED AI ENGINEERING SERIES · SAFE TO SEND 03 POLICY AS CODE**
+
+[GitHub Profile](https://github.com/sghatge) · [Portfolio](https://sghatge.github.io/adobe-campaign-v8-governance/)
+
+</div>
+
+---
+
 # safe-to-send-03 · Policy Is a File, Not a Prompt
 
 ![Safe to Send, Episode 03](docs/episode.png)
